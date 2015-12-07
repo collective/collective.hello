@@ -1,0 +1,14 @@
+<a  id="helloJoinConv"
+    tal:condition="view/displayJoinButton"
+    tal:attributes="href view/roomURL"
+    >
+    Join Hello Conversation
+</a>
+
+<button
+    id="helloCreateConv"
+    tal:condition="view/displayCreateButton"
+    tal:attributes="data-authenticator view/authenticator"
+    >
+    Create Hello Conversation
+</button>

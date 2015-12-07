@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="Event" meta_type="Dexterity FTI" i18n:domain="plone"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+ <!-- Enabled behaviors -->
+ <property name="behaviors" purge="false">
+  <element value="collective.hello.behaviors.hello.IHello"/>
+ </property>
+
+</object>

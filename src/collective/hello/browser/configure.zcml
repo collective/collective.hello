@@ -4,6 +4,23 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.hello">
 
+    <browser:page
+       name="helloService"
+       for="plone.app.contenttypes.interfaces.IEvent"
+       class=".views.HelloView"
+       permission="zope2.View"
+       />
+
+    <browser:viewlet
+        name="helloviewlet"
+        for="plone.app.contenttypes.interfaces.IEvent"
+        class=".viewlets.HelloViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        template="templates/viewlet.pt"
+        layer="collective.hello.interfaces.ICollectiveHelloLayer"
+        permission="zope2.View"
+        />
+
     <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
     <include package="z3c.jbot" file="meta.zcml" />
     <browser:jbot
