@@ -43,7 +43,10 @@ class HelloViewlet(ViewletBase):
     # Display create room button
 
     def sufficientPermissionsToCreate(self):
-        return (('Manager' in api.user.get_roles()) or ('Owner' in api.user.get_roles()))
+        if not api.user.is_anonymous():
+            return (('Manager' in api.user.get_roles()) or ('Owner' in api.user.get_roles()))
+        else:
+            return False
 
     def displayCreateButton(self):
         return (self.displayModule() and (not self.existingHelloConversation()) and self.sufficientPermissionsToCreate())
