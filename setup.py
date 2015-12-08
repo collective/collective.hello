@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-"""Installer for the collective.hello package."""
-
 from setuptools import find_packages
 from setuptools import setup
 
+version = '0.1'
 
 long_description = (
     open('README.rst').read()
@@ -19,7 +17,7 @@ long_description = (
 
 setup(
     name='collective.hello',
-    version='0.1',
+    version=version,
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -31,7 +29,7 @@ setup(
         "Programming Language :: Python :: 2.7",
     ],
     keywords='Python Plone',
-    author='Simon Prévidente',
+    author=u'Simon PREVIDENTE',
     author_email='simon.previdente@makina-corpus.com',
     url='http://pypi.python.org/pypi/collective.hello',
     license='GPL',
