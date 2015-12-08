@@ -2,7 +2,9 @@
 collective.hello
 ================
 
-It is a Plone module that adds interactivity to your events by linking them with `hello conversation <https://www.mozilla.org/firefox/hello/>`_. Hello is a free web application developed by Mozilla to quickly and easily make video conferencies (nothing to install / without registration).
+This module provides video conferencing to Plone events using Hello conversation. `Hello <https://www.mozilla.org/firefox/hello/>`_ is a free web application developed by Mozilla to quickly and easily make video conferencies (nothing to install / without registration) and it works on all modern web browsers.
+
+> `Demo video <https://www.youtube.com/watch?v=-e3ZesIFeK4>`_
 
 
 Installation
