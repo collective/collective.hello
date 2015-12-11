@@ -18,8 +18,15 @@ class HelloView(BrowserView):
             # Create room - maxSize cannot be greater than 5
             dataRoom = { "roomName": str(self.context.title), "roomOwner": str(getSite().title), "maxSize": 5 }
             loopRoom = requests.post("https://loop.services.mozilla.com/v0/rooms", auth=hawkAuth, data=dataRoom)
-            # Store and return roomToken
+            # Store roomToken
             annotations[KEY] = json.loads(loopRoom.content)["roomToken"]
-            return annotations[KEY]
+            # Return object with roomToken and credentials
+            response_data = {}
+            response_data["roomToken"] = json.loads(loopRoom.content)["roomToken"]
+            response_data["credentials"] = {}
+            response_data["credentials"]["algorithm"] = hawkAuth.credentials['algorithm']
+            response_data["credentials"]["id"] = hawkAuth.credentials['id']
+            response_data["credentials"]["key"] = hawkAuth.credentials['key']
+            return json.dumps(response_data)
         else:
             return None

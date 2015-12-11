@@ -20,6 +20,7 @@
         data: { _authenticator: authenticator },
         success: function (result) {
           helloSubmit.value = 'Room available !'
+          window.open('https://hello.firefox.com/' + result.roomToken)
           window.location.reload()
         },
         error: function (result) {
