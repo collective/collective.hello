@@ -4,13 +4,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.hello">
 
-    <browser:page
-       name="helloService"
-       for="plone.app.contenttypes.interfaces.IEvent"
-       class=".views.HelloView"
-       permission="zope2.View"
-       />
-
     <browser:viewlet
         name="helloviewlet"
         for="plone.app.contenttypes.interfaces.IEvent"

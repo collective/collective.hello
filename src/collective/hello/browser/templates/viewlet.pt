@@ -1,14 +1,5 @@
-<a  id="helloJoinConv"
-    tal:condition="view/displayJoinButton"
-    tal:attributes="href view/roomURL"
-    >
-    Join Hello Conversation
-</a>
-
-<button
-    id="helloCreateConv"
-    tal:condition="view/displayCreateButton"
-    tal:attributes="data-authenticator view/authenticator"
-    >
-    Create Hello Conversation
-</button>
+<iframe id="appearinFrame"
+  tal:attributes="src view/roomURL"
+  tal:condition="view/displayModule"
+  width="800" height="640" frameborder="0"
+  ></iframe>

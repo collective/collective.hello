@@ -1,20 +1,12 @@
 from plone.app.layout.viewlets.common import ViewletBase
 from collective.hello.behaviors.hello import IHello
-from zope.annotation.interfaces import IAnnotations
 from datetime import datetime
-from plone import api
-from .. import KEY
 import pytz
 
 class HelloViewlet(ViewletBase):
 
-    def authenticator(self):
-        authenticator = self.context.restrictedTraverse("@@authenticator")
-        return authenticator.token()
-
     def roomURL(self):
-        annotations = IAnnotations(self.context)
-        return "https://hello.firefox.com/"+annotations[KEY]
+        return "https://appear.in/"+self.context.id
 
     # Display module
 
@@ -28,22 +20,3 @@ class HelloViewlet(ViewletBase):
 
     def displayModule(self):
         return (self.enabledModule() and self.currentEvent())
-
-
-    # Display join button
-
-    def existingHelloConversation(self):
-        annotations = IAnnotations(self.context)
-        return KEY in annotations and annotations[KEY]
-
-    def displayJoinButton(self):
-        return (self.displayModule() and self.existingHelloConversation())
-
-
-    # Display create room button
-
-    def sufficientPermissionsToCreate(self):
-        return (('Manager' in api.user.get_roles()) or ('Owner' in api.user.get_roles()))
-
-    def displayCreateButton(self):
-        return (self.displayModule() and (not self.existingHelloConversation()) and self.sufficientPermissionsToCreate())

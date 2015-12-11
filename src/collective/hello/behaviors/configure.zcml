@@ -5,7 +5,7 @@
 
   <plone:behavior
       title="collective hello"
-      description="For Firefox Hello"
+      description="With appear.in"
       provides=".hello.IHello"
       />
 

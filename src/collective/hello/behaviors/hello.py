@@ -7,8 +7,8 @@ from zope.interface import alsoProvides
 class IHello(model.Schema):
 
     enabledModule = schema.Bool(
-        title=u"Hello join button",
-        description=u"Add button to join hello conversation when the event is started",
+        title=u"Video conversation",
+        description=u"Add appear.in iframe when the event is started",
         required=False,
     )
 
