@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2 (unreleased)
+0.2 (2015-12-14)
 ----------------
 
 - Switch from hello to appear.in
