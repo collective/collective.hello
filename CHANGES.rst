@@ -5,7 +5,7 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Switch from hello to appear.in
 
 
 0.1 (2015-12-08)
