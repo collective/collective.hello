@@ -1,6 +1,6 @@
 <div
   tal:condition="view/displayModule"
-  style="position:relative;min-height:300px;max-width:100%;resize:both;overflow:auto"
+  style="position:relative;height:435px;max-width:100%;resize:both;overflow:auto"
   >
   <iframe id="appearinFrame"
     style="position:absolute;top:0;bottom:0"
