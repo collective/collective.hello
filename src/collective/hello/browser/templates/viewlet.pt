@@ -1,5 +1,10 @@
-<iframe id="appearinFrame"
-  tal:attributes="src view/roomURL"
+<div
   tal:condition="view/displayModule"
-  width="800" height="640" frameborder="0"
-  ></iframe>
+  style="position:relative;min-height:300px;max-width:100%;resize:both;overflow:auto"
+  >
+  <iframe id="appearinFrame"
+    style="position:absolute;top:0;bottom:0"
+    tal:attributes="src view/roomURL"
+    width="100%" height="100%" frameborder="0"
+    ></iframe>
+</div>
