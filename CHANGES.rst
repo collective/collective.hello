@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2015-12-15)
 ----------------
 
 - Edit initial height iframe
