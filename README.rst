@@ -8,6 +8,8 @@ This module provides video conferencing to Plone events using appear.in :
 - Works on all modern web browsers.
 - Nothing to install
 
+> `Demo video <https://youtu.be/Lrp2u6Zdm4U>`_
+
 Installation
 ============
 
