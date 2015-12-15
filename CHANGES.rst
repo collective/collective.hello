@@ -5,7 +5,7 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Edit initial height iframe
 
 
 0.2 (2015-12-14)
